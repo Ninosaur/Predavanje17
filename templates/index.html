@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+
+    <p>Hello, ovo je index.html</p>
+
+    <p>Trenutna godina: {{year}}</p>
+
+    <p>{{poruka}}</p>
+
+    {% for x in gradovi %}
+        <p>{{x}}</p>
+    {% endfor %}
+
+    {% if user %}
+        <h2>Hello {{user}} Lijepo te vidjeti</h2>
+
+    {% else %}
+        <p>Korisnik nije tu</p>
+
+    {% endif %}
+
+
+
+
+{% endblock content %}

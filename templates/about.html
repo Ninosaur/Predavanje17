@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+
+    <h1>About me</h1>
+
+    {% if name %}
+    <p>Hello {{name}}</p>
+    {% endif %}
+
+    <!--
+
+    Zadatak:
+
+    - dodati prezime
+    - adresu
+    - grad (ovo je select form element, 3 grada)
+
+    -->
+
+    <form method="post" action="/about">
+
+    <input  type="text" name=contact-name" placeholder="Enter your name">
+
+    <br>
+
+    <input  type="text" name=contact-prezime" placeholder="Enter your prezime">
+    <br>
+
+
+
+    <select name="grad">
+    <option value="rijeka">Rijeka</option>
+    <option value="zagreb">Zagreb</option>
+    <option value="split">Split</option>
+
+    </select>
+
+    <br>
+
+    <input  type="text" name=contact-adresa" placeholder="Enter your adresa">
+    <br>
+    <input  type="email" name=contact-email" placeholder="Enter your email">
+    <br>
+
+    <textarea name="contact-message" placeholder="Enter your message"></textarea>
+    <br>
+    <button type="submit">Send</button>
+
+
+    </form>
+
+
+
+{% endblock content %}
